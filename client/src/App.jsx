@@ -7,7 +7,6 @@ function App() {
     const name = form.name.value;
     const email = form.email.value;
     const user = { name, email };
-    console.log(user);
 
     fetch("http://localhost:3300/users", {
       method: "POST",
@@ -28,9 +27,9 @@ function App() {
     <>
       <h2>Add User</h2>
       <form onSubmit={handleAddUser}>
-        <input type="text" name="name" />
+        <input type="text" name="name" required />
         <br />
-        <input type="email" name="email" />
+        <input type="email" name="email" required />
         <br />
         <input type="submit" value="Add User" />
       </form>
